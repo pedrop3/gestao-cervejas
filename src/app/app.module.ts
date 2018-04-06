@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { CervejasComponent } from './components/cervejas/cervejas.component';
+import { CervejaModule } from './components/cervejas/cerveja.module';
 
 
 @NgModule({
@@ -10,9 +12,14 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CervejaModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
+  bootstrap: [AppComponent],
+  exports: [CervejasComponent]
 })
 export class AppModule { }

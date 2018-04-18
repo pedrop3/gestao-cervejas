@@ -9,4 +9,4 @@ export class CervejaApi implements InMemoryDbService {
         ];
         return {cervejas}
     }
-}
+} 

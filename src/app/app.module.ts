@@ -4,6 +4,9 @@ import { AppComponent } from './app.component';
 import { CervejasComponent } from './components/cervejas/cervejas.component';
 import { FormsModule } from '@angular/forms';
 import { CervejasService } from './services/cervejas.service';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { HttpModule } from '@angular/http';
+import { CervejaApi } from './cerveja-api';
 
 
 @NgModule({
@@ -15,6 +18,8 @@ import { CervejasService } from './services/cervejas.service';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
+    InMemoryWebApiModule.forRoot(CervejaApi)
   ],
   //Declação dos Services
   providers: [CervejasService],

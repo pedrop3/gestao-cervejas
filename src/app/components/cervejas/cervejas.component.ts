@@ -22,7 +22,7 @@ export class CervejasComponent implements OnInit {
     cerveja.id= id;
     cerveja.nome = nome;
     cerveja.estilo=estilo;
-    cerveja.fabricante=fabricante;
+    cerveja.fabricante= fabricante;
     cerveja.paisOrigem=paisOrigem;
     return cerveja;
   }

@@ -1,2 +1,20 @@
-<h1>MADA</h1>
-    
+<table class="table table-stripped table-hover">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Estilo</th>  
+        <th>Fabricante</th>
+        <th>País de Origem</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cerveja of cervejas">
+        <td>{{cerveja.id}}</td>
+        <td>{{cerveja.nome}}</td>
+        <td>{{cerveja.estilo}}</td>
+        <td>{{cerveja.fabricante}}</td>
+        <td>{{cerveja.paisOrigem}}</td>
+      </tr>
+    </tbody>
+  </table>

@@ -4,22 +4,25 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CervejasComponent } from './components/cervejas/cervejas.component';
-import { CervejaModule } from './components/cervejas/cerveja.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
+  //Declaração dos Components
   declarations: [
-    AppComponent
+    AppComponent,
+    CervejasComponent
   ],
   imports: [
     BrowserModule,
-    CervejaModule
+    FormsModule,
   ],
+  //Declação dos Services
   providers: [],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
   bootstrap: [AppComponent],
-  exports: [CervejasComponent]
+  exports: []
 })
 export class AppModule { }
